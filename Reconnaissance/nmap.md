@@ -21,11 +21,10 @@ nmap <オプション> <ターゲット>
 -T4 高速スキャン
 ```
 
-## 例
+## 出力例
 ```bash
 nmap -p- -v -Pn -T4 10.10.10.1
 
-# 下記出力例
 Not shown: 65534 closed tcp ports (reset)
 PORT   STATE SERVICE
 23/tcp open  telnet
