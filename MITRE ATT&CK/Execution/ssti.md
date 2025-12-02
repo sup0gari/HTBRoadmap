@@ -9,3 +9,4 @@ Server-Side Template Injectionの略で、Webアプリケーションの脆弱�
 `${smarty.version}` バージョンが表示されたらSmarty(PHP)
 `<%= 7*7 %>` 49ならERB(Ruby)
 `__${7*7}__` 49ならThymeleaf(Java)
+`{{ this }}` 何らかのオブジェクトが返ればHandlebars(JavsScript)
