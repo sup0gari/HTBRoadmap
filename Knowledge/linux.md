@@ -15,3 +15,8 @@ sudo -i # rootシェル
 ```bash
 python3 -m http.server 8000 # 任意のファイルがあるディレクトリで実行
 ```
+
+## URLからファイルをダウンロード
+```bash
+wget <URL>
+```
