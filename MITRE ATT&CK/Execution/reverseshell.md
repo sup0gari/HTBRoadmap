@@ -8,6 +8,8 @@
 
 ## リバースシェル生成ツール
 [https://www.revshells.com/]
+## リバースシェル参考
+[https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet]
 
 ## pythonスクリプトを使用したリバースシェル
 ```python
