@@ -43,4 +43,9 @@ export PATH=<書き換えたいパス>
 ```
 
 ## ssh関連
-
+秘密鍵のファイル名  
+`id_rsa`, `id_dsa`, `id_ed25519`  
+公開鍵のファイル名  
+`id_rsa.pub`, `id_dsa.pub`, `id_ed25519.pub`  
+ファイルパス  
+`/home/<ユーザー名>/.ssh/`
