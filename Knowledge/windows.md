@@ -56,4 +56,6 @@ Active Directory Domain Servicesを実行しているっサーバーであり、
 公開鍵のファイル名  
 `id_rsa.pub`, `id_ed25519.pub`  
 ファイルパス  
-`C:\Users\<ユーザー名>\.ssh\`
+`C:\Users\<ユーザー名>\.ssh\`  
+公開鍵登録パス  
+`C:\Users\<ユーザー名>\.ssh\authorized_keys`
