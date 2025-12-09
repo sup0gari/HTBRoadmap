@@ -48,4 +48,6 @@ export PATH=<書き換えたいパス>
 公開鍵のファイル名  
 `id_rsa.pub`, `id_dsa.pub`, `id_ed25519.pub`  
 ファイルパス  
-`/home/<ユーザー名>/.ssh/`
+`/home/<ユーザー名>/.ssh/`  
+公開鍵登録パス  
+`/home/<ユーザー名>/.ssh/authorized_keys`
