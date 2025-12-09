@@ -10,3 +10,10 @@ whoami /priv # 自身の権限を表示
 Get-ChildItem -Force # すべてのファイルを表示
 dir /a # cmd
 ```
+
+## プロセス情報表示
+```bash
+Get-Process
+ps
+tasklist
+```
