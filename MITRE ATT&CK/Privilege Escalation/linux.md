@@ -18,9 +18,8 @@ sudo systemctl status <サービス>
    1. `user root;` nginxをroot権限で実行
    2. `root /;` Webサーバーのドキュメントルートをターゲットのルートに設定
    3. 外部からファイルをアップロードするためのWevDav機能とPUTメソッドを有効化
-3. 攻撃者は自身のローカルマシンからWebDAV PUTメソッドを使用してターゲットのファイルシステムに任意のファイルをroot権限で書き込む。
-4. 攻撃者は自身のローカルマシンでSSHキーペアを生成。
-5. WebDAV PUTメソッドを利用して生成した公開鍵をターゲットの`/root/.ssh/authorized_keys`に書き込む。
+4. SSHキーペアを生成。
+5. WebDAV PUTメソッドを利用して生成した公開鍵を`/root/.ssh/authorized_keys`に書き込む。
 6. rootのSSH設定が書き換えられたため、攻撃者は生成した秘密鍵によりrootとしてsshログインが可能。
 ```bash
 touch /tmp/pwn.conf
