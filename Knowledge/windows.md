@@ -50,6 +50,13 @@ Active Directory Domain Servicesを実行しているっサーバーであり、
 - SPNとは  
 サービスを実行しているアカウント（サービスアカウント、もしくはコンピュータアカウント）に紐付けられるもの。
 
+## Kerberoastingとは
+SPNが登録されているアカウントのパスワードハッシュを抜き取る攻撃手法。
+
+## DCSyncとは
+DCの情報同期（レプリケーション）機能を使って全ユーザーのNTLMハッシュを取得する攻撃手法。  
+DCに対してGetChangesAll, GetChangesの権限があれば成功する可能性が高い。
+
 ## ssh関連
 秘密鍵のファイル名  
 `id_rsa`, `id_ed25519`  
