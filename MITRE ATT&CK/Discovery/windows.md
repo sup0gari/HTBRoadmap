@@ -34,3 +34,8 @@ sc.exe query <サービス> # サービスの状態
 sc.exe config <サービス> binPath="<パス>" # binPathの変更
 sc.exe qc <サービス> # サービス詳細確認
 ```
+
+## Active Directory関連
+```bash
+Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincipalName | Select Name, ServicePrincipalName # SPNを持つユーザー列挙
+```
