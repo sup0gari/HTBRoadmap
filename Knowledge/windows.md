@@ -1,3 +1,8 @@
+## ファイルの作成
+```poweshell
+New-Item <ファイル>
+```
+
 ## ファイルをダウンロード
 ```powershell
 wget <URL> -o <ダウンロード先のパスと保存名>
