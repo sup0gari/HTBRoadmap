@@ -28,6 +28,7 @@ python3 -m http.server 8000 # 任意のファイルがあるディレクトリ�
 ## URLからファイルをダウンロード
 ```bash
 wget <URL>
+curl <URL> -o <保存名>
 ```
 
 ## SUID, SGIDとは
