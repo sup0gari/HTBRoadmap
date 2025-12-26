@@ -92,3 +92,12 @@ robocopy /b C:\Users\Administrator\Desktop\ C:\
 ```bash
 Server Operators # Windows ServerやActive Directory環境において、サーバーの運用管理に関する一定の権限を持つ、組み込みの特殊なセキュリティグループ。サービスを利用して権限昇格の可能性あり。
 ```
+
+## ETWとは
+Event Tracing for Windowsの略。OSやアプリケーションの挙動をリアルタイムに監視しているカーネルレベルのシステム。  
+ETWはログに書き込まれる前に検知に加えて、イベントログにない情報も取得可能。  
+`ntdll.dll`に工夫するとバイパスできることがある。
+以下の3つで構成される。
+- Provider: ファイルを開く、書き込むなどのイベントを発生させる。
+- Controller: どのProviderからどの情報を取るか決める。
+- Consumer: 流れてきたイベントを受け取って処理をする。
