@@ -52,3 +52,9 @@ find / -perm -2000 -type f -exec ls -l {} \; 2>/dev/null # SGID検索
 ## sudoers
 一般ユーザーが sudo コマンドを使用する際に、どのコマンドを、どのユーザーの権限で、パスワードなしで実行できるかを細かく定義したファイル  
 `/etc/sudoers`に通常あり、`sudo -l`で見れる。
+
+## cron
+```bash
+crontab -l
+cat /etc/crontab
+```
