@@ -68,3 +68,6 @@ export PATH=<書き換えたいパス>
 
 ## 一時ファイルの作成と移動
 `cd $(mktemp -d)`
+
+## 16進数をasciiに変換
+`xxd -r -p <ファイル> > <ASCII>`
