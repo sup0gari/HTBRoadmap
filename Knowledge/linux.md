@@ -77,3 +77,9 @@ export PATH=<書き換えたいパス>
 no mutual signature supported # 署名ルールが一致しないときのエラー
 -o PubkeyAcceptedKeyTypes=ssh-rsa # ssh-rsa(sha1)を強制的に使用
 ```
+
+## パラメータバイパス
+```bash
+${IFS} # スペース
+echo <base64 ペイロード>|base64 -d|bash
+```
