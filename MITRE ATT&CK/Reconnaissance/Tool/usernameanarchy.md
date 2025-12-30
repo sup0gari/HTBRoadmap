@@ -4,4 +4,12 @@
 ## コマンド
 ```bash
 username-anarchy --input-file <ユーザーリスト> --select-format first, flast, first.last, firstl > <生成ファイル名>
+
+# unused.txt
+Taro Tanaka
+
+# used.txt
+taro
+taro.tanaka
+tarot
 ```
