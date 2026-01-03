@@ -1,0 +1,7 @@
+# Procdumpとは
+Sysinternalsツールの一つでプロセスのメモリの中身を、ダンプファイルとして書き出すためのツール。
+
+## コマンド
+```bash
+procdump.exe -ma <プロセスID> <出力名>.dmp
+```
