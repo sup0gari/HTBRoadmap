@@ -64,3 +64,8 @@ cat /etc/crontab
 
 ## プロセス
 `ps aux`
+
+## grep
+```
+grep -R -e "password" /var/log
+```
